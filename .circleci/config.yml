@@ -9,6 +9,7 @@ workflows:
       - medium-plus
       - large
   machine_jobs:
+    requires: resource_class_jobs
     jobs:
       - machine1
       - remote_docker
