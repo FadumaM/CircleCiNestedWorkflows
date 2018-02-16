@@ -9,11 +9,13 @@ workflows:
       - medium-plus
       - large
   machine_jobs:
-    requires: resource_class_jobs
     jobs:
       - machine1
       - remote_docker
       - remote_docker_reusable
+      - resource_class_jobs
+        requires:
+          - feature_jobs
   feature_jobs:
     jobs:
       - contexts:
