@@ -17,8 +17,6 @@ workflows:
       - resource_class_jobs
   feature_jobs:
     jobs:
-      - contexts:
-          context: org-global
       - write_workspace
       - use_workspace:
           requires:
@@ -93,13 +91,6 @@ jobs:
       - run:
           <<: *basic_docker_build
       - run: docker version
-
-  contexts:
-    docker:
-      - image: alpine:latest
-    working_directory: /a/contexts/test
-    steps:
-      - run: env | grep CONTEXT_END_TO_END_TEST_VAR
 
   write_workspace:
     docker:
