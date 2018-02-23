@@ -2,7 +2,7 @@ version: 2
 debug: true
 workflows:
   version: 2
-  resource_class_jobs:
+  rollback:
     jobs:
       - small
       - medium
