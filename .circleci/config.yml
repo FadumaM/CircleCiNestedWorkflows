@@ -8,6 +8,7 @@ workflows:
       - medium
       - medium-plus
       - large
+          type: approval
   machine_jobs:
     jobs:
       - machine1
