@@ -14,8 +14,6 @@ workflows:
       - remote_docker
       - remote_docker_reusable
       - resource_class_jobs
-        requires:
-          - feature_jobs
   feature_jobs:
     jobs:
       - contexts:
